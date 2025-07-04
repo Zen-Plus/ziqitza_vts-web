@@ -1,0 +1,3618 @@
+@import "./mediaQueryMixin.less";
+
+@red: #ed3035;
+@green: #60db91;
+@peachpuff: peachpuff;
+@black: black;
+@gray50: #999999;
+@lightorange: #fcb98b;
+@orange: #ffa500;
+@pinkswan: #b2b2b2;
+@matterhorn: #4c4c4c;
+@white: #fff;
+@smokewhite: #f5f5f5;
+@highlight-color: #fff;
+@gray40: #666;
+@gray95: #f2f2f2;
+@gray90: #e5e5e5;
+@graybg: #f8f8f8;
+@gray99: #999;
+@yellow: #f9bb4b;
+@graydark: #020100;
+@text-color: @matterhorn;
+@fadegreen: rgba(96, 219, 145, 0.5);
+@hoverred: #fa5a5a;
+@blue: #475cde;
+@lightgreen: #63971a;
+@amber: #f97334;
+@darkorange: #f92b1c;
+@skyblue: #6ed0da;
+@warmblue: #475cde;
+@neutralDark: #131313;
+@blue: #377FEA;
+@headergray: #F0F0F0;
+
+@error-color: @red;
+@success-color: @green;
+@divider-color: @gray95;
+
+@input-focus-border-color: @matterhorn;
+@input-hover-border-color: #fff;
+@input-label-color: @pinkswan;
+@input-placeholder-color: #ccc;
+@input-height-base: 36px;
+
+@box-shadow-base: 0 2px 14px 0 rgba(0, 0, 0, 0.1);
+@box-shadow-secondary: 0 0 5px 0 rgba(0, 0, 0, 0.11);
+@box-shadow-dropbox: 0 2px 7px 0 rgba(0, 0, 0, 0.11);
+@box-shadow-dark: 0 2px 7px 0 rgba(0, 0, 0, 0.11);
+
+@border-color-base: #fff;
+@border-width-base: 0px;
+@border-radius-base: 4px;
+@border: 2px solid rgba(0,0,0,0.2);
+
+body {
+  .ZiqitzaVTS::before {
+    background-image: url('/vts/view-bg-vts-dashboard.svg');
+  }
+  .ZiqitzaVTS {
+    .App {
+      height: 200px;
+      background-color: @black;
+      color: @peachpuff;
+      align-content: center;
+      justify-content: center;
+      display: grid;
+    }
+
+    .App h1 {
+      color: @peachpuff;
+    }
+
+    .H-100 {
+      height: 100%;
+    }
+
+    .HasPermission_DisableLink {
+      pointer-events: none;
+      color: @matterhorn;
+      > div {
+        text-decoration: none;
+        color: @matterhorn;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+    
+    .leaflet-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    [ant-click-animating-without-extra-node]:after {
+      -webkit-animation: none !important;
+      -moz-animation: none !important;
+      -o-animation: none !important;
+      -ms-animation: none !important;
+      animation: none !important;
+    }
+
+    .ant-btn {
+      line-height: 1;
+      border-color: #fff;
+      height: 40px;
+      border: 0px solid transparent;
+      font-size: 1rem;
+      border-radius: 4px;
+      color: #fff;
+      padding: 12px 15px;
+      background-color: @matterhorn;
+      font-weight: bold;
+    }
+    .ant-btn-link {
+      color: #ed3035;
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: none;
+    }
+
+    .View-Bg-Default::before {
+      background-image: url('/vts/view-bg-vts-dashboard.svg');
+      height: 200px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      background-position: 0;
+      top: 0;
+      z-index: 0;
+      display: block;
+      content: '';
+    }
+
+    .ActionLabel {
+      font-size: 0.875rem;
+      color: @gray99;
+      margin-bottom: 7px;
+    }
+
+    .List__Header {
+      padding-left: 66px;
+      color: @gray99;
+      font-weight: bold;
+    }
+
+    .List__Row {
+      padding-left: 20px;
+      align-items: center;
+    }
+
+    .ant-btn-link {
+      font-weight: normal;
+    }
+
+    .ant-btn-default:focus,
+    .ant-btn-default:hover,
+    .ant-btn-default:active {
+      color: #fff;
+      border-color: @matterhorn;
+    }
+
+    .ant-btn-plain {
+      background-color: @highlight-color;
+      color: @matterhorn;
+      box-shadow: @box-shadow-secondary;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .ant-btn-plain:focus,
+    .ant-btn-plain:hover,
+    .ant-btn-plain:active {
+      background-color: @highlight-color;
+      color: @matterhorn;
+      box-shadow: @box-shadow-secondary  !important;
+    }
+
+    .Box--Shadow {
+      box-shadow: @box-shadow-base;
+    }
+
+    .Width-Full {
+      width: 100%;
+    }
+
+    // Border
+    .BorderRadius--Base {
+      border-radius: @border-radius-base;
+    }
+
+    .Border-None {
+      border: none;
+    }
+    .TextAlign--Center {
+      text-align: center;
+    }
+    .Border-Gray {
+      border-color: #DDDDDD !important;
+    }
+
+    // divider
+    .Divider-Bottom {
+      border-bottom: 1px solid @divider-color;
+    }
+
+    .Divider-Bottom-Gray90 {
+      border-bottom: 1px solid @gray90;
+    }
+
+    .Divider-Left {
+      border-left: 1px solid @divider-color;
+    }
+
+    .Flex {
+      display: flex;
+    }
+
+    .Flex-Direction-Column {
+      flex-direction: column;
+    }
+
+    .JustifyContent--Center {
+      justify-content: center;
+    }
+
+    .Height-Full {
+      height: 100%;
+    }
+
+    .Align-Items-Center {
+      align-items: center;
+    }
+
+    .Align-Items-Start {
+      align-items: flex-start;
+    }
+
+    .Align-Items-Baseline {
+      align-items: baseline;
+    }
+
+    .Flex-Space-Between {
+      justify-content: space-between;
+    }
+
+    .Ml-20 {
+      margin-left: 20px;
+    }
+    //Background color
+    .Bg-Gray {
+      background-color: @graybg;
+    }
+    .Gray50-Text {
+      color: @gray50;
+    }
+    .Break-Word {
+      word-break: break-word;
+    }
+    .Bg-Head-Gray {
+      background-color: @headergray !important;
+    }
+    .Bg-White {
+      background-color: @white !important;
+    }
+
+    // fonts
+    .Font--WB {
+      font-weight: bold;
+    }
+
+    .Font--S12 {
+      font-size: 0.75rem;
+    }
+
+    .Font--S14 {
+      font-size: 0.875rem;
+    }
+
+    .Font--S16 {
+      font-size: 1rem;
+    }
+
+    .Font--S18 {
+      font-size: 1.125rem;
+    }
+
+    .Font--S20 {
+      font-size: 1.25rem;
+    }
+
+    .Font--S24 {
+      font-size: 1.5rem;
+    }
+
+    .Text-Decoration-Underline {
+      text-decoration: underline;
+    }
+    .Text_NoWrap {
+      text-wrap: nowrap;
+    }
+    .Warmblue-Text{
+      color: @blue;
+    }
+    // margins
+    .Mt-4{
+      margin-top: 4px;
+    }
+    .Mt-8{
+      margin-top: 8px;
+    }
+    .Mt-10{
+      margin-top: 10px;
+    }
+    .Mt-15{
+      margin-top: 15px;
+    }
+    .Mt-12 {
+      margin-top: 12px;
+    }
+
+    .Mt-20 {
+      margin-top: 20px;
+    }
+    .Mt-28 {
+      margin-top: 28px;
+    }
+    .Mt-30 {
+      margin-top: 30px;
+    }
+
+    .Mt-40 {
+      margin-top: 40px;
+    }
+
+    .Mt-50 {
+      margin-top: 50px;
+    }
+
+    .Mb-6 {
+      margin-bottom: 6px;
+    }
+
+    .Ml-5 {
+      margin-left: 5px;
+    }
+    .Ml-8 {
+      margin-left: 8px;
+    }
+    .Ml-15{
+      margin-left: 15px;
+    }
+    .Ml-20 {
+      margin-left: 20px;
+    }
+
+    .Ml-10 {
+      margin-left: 10px;
+    }
+    .Ml-12 {
+      margin-left: 12px;
+    }
+
+    .Ml-24 {
+      margin-left: 24px;
+    }
+
+    .Mr-8 {
+      margin-right: 8px;
+    }
+
+    .Mr-14 {
+      margin-right: 14px;
+    }
+
+    .Mr-16 {
+      margin-right: 16px;
+    }
+
+    .Mr-20 {
+      margin-right: 20px;
+    }
+
+    .Mr-35 {
+      margin-right: 35px;
+    }
+
+    // Paddings
+    .Pl-12 {
+      padding-left: 12px;
+    }
+
+    .Pr-12 {
+      padding-right: 12px;
+    }
+
+    .P-16 {
+      padding: 16px;
+    }
+
+    .Ph-5 {
+      padding: 0px 5px;
+    }
+
+    // Cursor
+    .Cursor-Pointer {
+      cursor: pointer;
+    }
+
+    .Cursor-Default {
+      cursor: default;
+    }
+
+    // Text color
+    .GrayDark-Text {
+      color: @graydark;
+    }
+    .Blue-Text {
+      color: @blue;
+    }
+    .Red-Text {
+      color: @red;
+    }
+    .Label-Text {
+      font-size: 0.875rem;
+      color: #b2b2b2;
+      margin-bottom: 8px;
+    }
+    .Copy-Text {
+      margin-top: 3px;
+    }
+    .Value-Text {
+      margin-top: 17px;
+      word-break: break-all;
+    }
+    .Pointer-None {
+      pointer-events: none;
+    }
+    .NeutralDark {
+      color: @neutralDark;
+    }
+
+
+    //ant checkbox
+    .ant-checkbox {
+      border: solid 2px @gray40;
+      border-radius: 2px;
+    }
+
+    .ant-checkbox-inner {
+      border-radius: 0px;
+      border: 0px;
+    }
+
+    .ant-checkbox-inner::after {
+      left: 21%;
+      height: 12px;
+      top: 45%;
+    }
+
+    // loader with overlay
+    .Loader-Overlay {
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      z-index: 9999;
+      background-color: rgba(243, 239, 239, 0.568);
+
+      .Overlay__Inner {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        position: absolute;
+      }
+
+      .Overlay__Content {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        z-index: 10009;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .ContentWrap {
+      margin-top: 0 !important;
+      padding-top: 60px !important;
+    }
+
+    // VTSDashboard
+    .VTSDashboard {
+      .ContentWrap {
+        margin-top: 0 !important;
+        padding-top: 60px !important;
+      }
+
+      .leaflet-control-layers {
+        display: none;
+      }
+      .mutant-attr-container {
+        display: none;
+      }
+      .leaflet-control-attribution {
+        display: none !important;
+      }
+      .Map-Height {
+        height: 443px;
+        width: 550px;
+      }
+    }
+    .all {
+      color: @matterhorn;
+    }
+
+    .deviceMalfunctioningCount {
+      color: #f92b1c;
+    }
+    .noResponseCount {
+      color: #801D19;
+    }
+
+    .movingCount {
+      color: @lightgreen;
+    }
+
+    .parkedCount {
+      color: @yellow;
+    }
+
+    .unauthorizedCount {
+      color: @amber;
+    }
+    .map-z-index {
+      z-index: 1;
+    }
+    .TripReplayLegend {
+      .legend-i-icon {
+        height: 32px;
+        width: 34px;
+        background-color: @white;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2px;
+        box-shadow: @box-shadow-dark;
+        cursor: pointer;
+        border: @border;
+      }
+
+      .legend-i-icon:hover {
+        background-color: #f4f4f4;
+      }
+
+      .legend-body-wrap {
+        border-radius: 4px;
+        box-shadow: @box-shadow-dark;
+        background-color: @white;
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        color: @matterhorn;
+      }
+
+      .legend-body-head {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+      }
+
+      .legend-body-container-ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin-bottom: 0;
+      }
+
+      .legend-body-items {
+        svg {
+          margin-right: 10px;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 32px;
+      }
+
+      .legend-body-item-img {
+        height: 38px;
+        width: 16px;
+        transform: rotate(90deg);
+      }
+
+      .legend-body-item-img-jsa {
+        width: 18px;
+      }
+    }
+    .VtsTripReplayLegend {
+      .legend-i-icon {
+        height: 32px;
+        width: 34px;
+        background-color: @white;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2px;
+        box-shadow: @box-shadow-dark;
+        cursor: pointer;
+        border: @border;
+      }
+
+      .legend-i-icon:hover {
+        background-color: #f4f4f4;
+      }
+
+      .legend-body-wrap {
+        border-radius: 4px;
+        box-shadow: @box-shadow-dark;
+        background-color: @white;
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        color: @matterhorn;
+      }
+
+      .legend-body-head {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+      }
+
+      .legend-body-container-ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin-bottom: 0;
+      }
+
+      .legend-body-items {
+        svg {
+          height: 40px;
+          width: 40px;
+          margin-right: 10px;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 32px;
+      }
+
+      .legend-body-item-img {
+        height: 38px;
+        width: 16px;
+        transform: rotate(90deg);
+      }
+
+      .legend-body-item-img-jsa {
+        width: 18px;
+      }
+    }
+
+    .Legend {
+      .legend-i-icon {
+        height: 32px;
+        width: 34px;
+        background-color: @white;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2px;
+        box-shadow: @box-shadow-dark;
+        cursor: pointer;
+        border: @border;
+      }
+
+      .legend-i-icon:hover {
+        background-color: #f4f4f4;
+      }
+
+      .legend-body-wrap {
+        width: 109px;
+        height: 143px;
+        border-radius: 4px;
+        box-shadow: @box-shadow-dark;
+        background-color: @white;
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        color: @matterhorn;
+      }
+
+      .legend-body-head {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+      }
+
+      .legend-body-container-ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin-bottom: 0;
+      }
+
+      .legend-body-items {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 32px;
+      }
+
+      .legend-body-item-img {
+        height: 38px;
+        width: 16px;
+        transform: rotate(90deg);
+      }
+
+      .legend-body-item-img-jsa {
+        width: 18px;
+      }
+    }
+
+    .leaflet-control-layers {
+      display: none;
+    }
+    .mutant-attr-container {
+      display: none;
+    }
+    .leaflet-control-attribution {
+      display: none !important;
+    }
+
+    .leaflet-tooltip-right {
+      left: 25px;
+    }
+
+    .dashboard-header-buttons {
+      height: 40px;
+      width: 150px;
+      border-radius: 4px;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 12px;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+
+      .Device_Malfunctioning_Tab {
+        white-space: pre-wrap;
+        text-align: left;
+        line-height: 12px;
+      }
+    }
+
+    .selected-dashboard-header-button {
+      border-bottom: 4px solid black;
+    }
+
+    // VtsFilterWrap
+    .VtsFilterWrap {
+      .overlay {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    // VtsSettngWrap
+    .VtsSettingWrap {
+      .overlay {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    // ListActionDateRangePicker
+    .ListActionDateRangePicker {
+      flex: 0 0 300px;
+
+      .DateRangePicker {
+        width: 238px !important;
+
+        .ant-picker {
+          top: 0px;
+          height: 40px;
+        }
+
+        .ant-picker-range .ant-picker-clear {
+          right: 9px;
+          top: 20px;
+        }
+      }
+    }
+
+    // ListActionSlider
+    .ListActionSlider {
+      .ant-slider {
+        width: 154px;
+        margin-left: 0px;
+      }
+
+      .ant-slider-rail {
+        height: 6px;
+      }
+
+      .ant-slider-track {
+        height: 6px;
+        background-color: @skyblue;
+      }
+
+      .ant-tooltip-open {
+        border-color: none;
+      }
+
+      .ant-slider-handle {
+        width: 16px;
+        height: 16px;
+        border: none;
+        background-color: @skyblue;
+      }
+
+      .ant-slider-handle:focus {
+        box-shadow: none;
+      }
+
+      .ant-slider:hover .ant-slider-track {
+        background-color: @skyblue;
+      }
+    }
+
+    // Input
+    .Input {
+      position: relative;
+      height: 56px;
+
+      .Input__Label {
+        font-size: 0.75rem;
+        color: @input-label-color;
+        margin-bottom: 8px;
+      }
+
+      .ant-input {
+        border-radius: 4px;
+        font-size: 0.875rem;
+        padding: 12px 8px 9px 8px;
+        position: absolute;
+        left: 0;
+        top: 20px;
+        height: 36px;
+        border-color: @white;
+      }
+      .Error {
+        &:extend(.Input__Label);
+        color: @error-color;
+      }
+
+      .Error--Border {
+        &:extend(.Box--Shadow);
+        border: 1px solid @error-color;
+      }
+
+      .ant-input-disabled:hover {
+        border-right-width: 0px !important;
+      }
+
+      .Input__Error {
+        font-size: 0.75rem;
+        position: absolute;
+        bottom: -19px;
+        left: 0;
+        color: @error-color;
+      }
+      .ant-input:hover {
+        border-right-width: 1px !important;
+      }
+      .ant-input:focus {
+        border: 1px solid @input-focus-border-color;
+        outline: 1;
+        -webkit-box-shadow: @box-shadow-base;
+        box-shadow: @box-shadow-base;
+        border-right-width: 1px !important;
+        border-color: @matterhorn;
+      }
+    }
+
+    // InputTextNative
+    .InputText-Native {
+      position: relative;
+      height: 56px;
+
+      .InputText-Native__Label {
+        font-size: 0.75rem;
+        color: @input-label-color;
+        margin-bottom: 8px;
+      }
+
+      .Error {
+        &:extend(.InputText-Native__Label);
+        color: @error-color;
+      }
+
+      .Error--Border {
+        &:extend(.Box--Shadow);
+        border: 1px solid @error-color;
+      }
+
+      input {
+        border-radius: 4px;
+        font-size: 0.875rem;
+        padding: 12px 8px 9px 8px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20px;
+        height: 36px;
+        background-color: @white;
+        box-shadow: @box-shadow-base;
+        width: 100%;
+        border: none;
+        outline: none;
+      }
+
+      input::placeholder {
+        opacity: 0.5;
+      }
+
+      input:focus {
+        border: 1px solid @input-focus-border-color;
+        outline: 1;
+        -webkit-box-shadow: @box-shadow-base;
+        box-shadow: @box-shadow-base;
+      }
+
+      .InputText-Native__Error {
+        font-size: 0.75rem;
+        position: absolute;
+        bottom: -19px;
+        left: 0;
+        color: @error-color;
+      }
+    }
+
+    //List Dashboard
+    .ListDashboardMaster {
+      // List Header Row Wrapper
+      .ListMaster__Header {
+        background-color: #ff9934;
+        .ListMaster__Header__Item {
+          border: 1px solid #fff;
+          vertical-align: middle;
+          text-align: center;
+          padding: 5px;
+          height: 40px;
+        }
+      }
+
+      .HeaderBackground {
+        background-color: @headergray !important;
+      }
+
+      // List Body Row Wrapper
+      .ListMaster__Row {
+        background-color: #f6deb2;
+        .ListMaster__Row__Item {
+          border: 1px solid #fff;
+          vertical-align: middle;
+          text-align: center;
+          padding: 8px;
+          height: 40px;
+        } 
+      }
+      .BG--Orange {
+        background-color: #fecf9f;
+      }
+      .Border {
+        border: 1px solid #DDDDDD !important;
+      }
+    }
+    
+
+    // ListMaster
+    .ListMaster {
+      display: table;
+
+      .ListMaster__Header {
+        display: flex;
+        padding: 15px 15px 13px 21px;
+        width: 1160px;
+        border: solid 1px @smokewhite;
+        align-items: center;
+
+        .ListMaster__Header__Item {
+          font-weight: bold;
+          color: @gray50;
+        }
+        
+        .Break_All {
+          word-break: break-all;
+        }
+      }
+
+      .ListMaster__Row {
+        padding: 15px 15px 10px 22px;
+        display: flex;
+        width: 1160px;
+
+
+        .ListMaster__Row__Item {
+          word-break: break-all;
+        }
+      }
+
+      .ant-checkbox {
+        border: solid 1px @gray40;
+      }
+
+      .ant-checkbox-checked .ant-checkbox-inner {
+        background-color: @highlight-color;
+        border-radius: 2px;
+      }
+
+      .ant-checkbox-checked:after {
+        --antd-wave-shadow-color: @matterhorn;
+        border: unset;
+      }
+
+      .ant-checkbox-checked .ant-checkbox-inner::after {
+        border: 1.5px solid @matterhorn;
+        border-top: 0;
+        border-left: 0;
+      }
+
+      .ML-20 {
+        margin-left: 20px;
+      }
+
+      .ML-23 {
+        margin-left: 23px;
+      }
+
+      .DarkOrange {
+        color: @darkorange;
+      }
+      .Maroon {
+        color: #801D19;
+      }
+      .lightRed {
+        color: #f92b1c;
+      }
+
+      .LightGreen {
+        color: @lightgreen;
+      }
+
+      .Yellow {
+        color: @yellow;
+      }
+
+      .Amber {
+        color: @amber;
+      }
+
+      .Blue {
+        color: @blue;
+      }
+
+      .Black {
+        color: @black;
+      }
+      .Green-dot {
+        height: 14px;
+        width: 14px;
+        border-radius: 50%;
+        background-color: #63971a;
+      }
+
+      .Red-dot {
+        height: 14px;
+        width: 14px;
+        border-radius: 50%;
+        background-color: #f92b1c;
+      }
+
+      .Yellow-dot {
+        height: 14px;
+        width: 14px;
+        border-radius: 50%;
+        background-color: #f9bb4b;
+      }
+
+      .Navigation_Link {
+        color: @blue;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .Bg__MASTER {
+        background-color: @graybg;
+      }
+
+      [ant-click-animating-without-extra-node]:after {
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+      }
+    }
+
+    // ant selectbox
+    .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+      height: 100%;
+      padding-left: 16px;
+      padding-top: 2px;
+      border: none;
+    }
+
+    .ant-select-item {
+      padding-left: 16px;
+      font-size: 1rem;
+    }
+
+    .ant-select-focused .ant-select-selector,
+    .ant-select-selector:focus,
+    .ant-select-selector:active,
+    .ant-select-open .ant-select-selector {
+      border-color: #ffffff !important;
+      box-shadow: none !important;
+    }
+
+    .SelectDrop {
+      position: relative;
+      min-height: 78px;
+      width: 100%;
+      .LabelText {
+        font-size: 0.875rem;
+        color: @gray99;
+      }
+      .SelectWrap {
+        width: 275px;
+        position: relative;
+      }
+      .DropList {
+        max-height: 200px !important;
+        min-height: 36px;
+        background: @white;
+        border-radius: 4px; 
+        box-shadow: @box-shadow-dropbox;
+        position: absolute !important;
+        left: 0;
+        right: 0;
+        top: 48px;
+        > div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .DropListItem,
+      .DropListItemMulti {
+        padding: 10px;
+        margin: 0;
+        display: flex;
+        outline: none;
+        input {
+          width: calc(100% - 15px);
+        }
+        span:last-child {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      .DropListItemMulti.ant-checkbox-wrapper {
+        margin-left: 0; 
+        max-height: 36px;
+      }
+      .Select {
+        width: 275px;
+        height: 36px;
+        border-radius: 4px;
+        background-color: white;
+        box-shadow: @box-shadow-dropbox;
+        border: none;
+        padding: 10px 25px 10px 8px;
+        outline: none;
+        position: absolute;
+        top: 6px;
+        cursor: default;
+        color: @graydark;
+      }
+      .Select.Disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      .Selected-ReadOnly {
+        width: 275px;
+      }
+      .SelectedItemsWrap {
+        max-height: 92px;
+        margin-top: 54px;
+        overflow-y: auto;
+        border: 1px solid @gray95;
+        margin-bottom: 10px;
+      }
+      .SelectedItemsWrap.Readonly {
+        margin-top: 19px;
+      }
+      .SelectedItem {
+        width: auto;
+        height: 24px;
+        border-radius: 12px;
+        background-color: @gray95;
+        padding: 6px;
+        margin: 2px;
+        display: flex;
+        align-content: center;
+        line-height: 1;
+      }
+    
+      input:focus {
+        border: 1px solid @matterhorn;
+      }
+      input:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      .Error-Border {
+        border: 1px solid @error-color;
+      }
+      .Error-Text {
+        font-size: 0.75rem;
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        color: @error-color;
+        line-height: 1;
+      }
+    
+      .DropListItemMulti {
+        font-size: 0.875rem;
+        display: flex;
+        align-items: center;
+      }
+    
+      .Drop-Arrow {
+        position: absolute;
+        top: 14px;
+        right: 8px;
+        pointer-events: none;
+        line-height: 1;
+      }
+    
+      .ant-checkbox-inner {
+        height: 14px;
+        width: 14px;
+      }
+      .ant-checkbox-checked .ant-checkbox-inner {
+        background-color: @highlight-color;
+        border-radius: 2px;
+      }
+    
+      .ant-checkbox-checked:after {
+        --antd-wave-shadow-color: @matterhorn;
+        border: unset;
+      }
+
+      .ant-checkbox-checked .ant-checkbox-inner::after {
+        border: 1.5px solid @matterhorn;
+        border-top: 0;
+        border-left: 0;
+        left: 16%;
+      }
+    }
+
+    // Button Custom
+    .ButtonCustom {
+      outline: none;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: @red;
+      color: @white;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    .BorderButton {
+      border: 1px solid #DDDDDD !important;
+    }
+
+    .ButtonCustom:hover {
+      background-color: @hoverred;
+    }
+
+    .ButtonCustom.Disabled {
+      color: rgba(0, 0, 0, 0.25);
+      background-color: @smokewhite;
+      border-color: @white;
+      text-shadow: none;
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+    //Toggle Select
+    .ToggleSelect {
+      display: flex;
+      flex-direction: column;
+      .ToggleSelect__Label {
+        font-size: 0.875rem;
+        color: @gray99;
+        margin-bottom: 8px;
+      }
+      .ButtonCustom {
+        width: 135px;
+        height: 36px;
+        color: @text-color;
+        background-color: @white;
+        font-weight: normal;
+        border: 1px solid @gray90;
+        text-transform: lowercase;
+      }
+      .ButtonCustom:hover {
+        background-color: @white;
+      }
+      .ButtonCustom span:first-letter {
+        text-transform: uppercase;
+      }
+      .ButtonCustom.Selected {
+        background-color: @green;
+        border: none;
+        font-weight: bold;
+        box-shadow: @box-shadow-base;
+      }
+    }
+
+    .ToggleSelect.Disabled {
+      .ButtonCustom.Disabled {
+        border: 1px solid @gray90;
+        background-color: @white;
+      }
+      .ButtonCustom.Disabled:hover {
+        background-color: @white;
+      }
+      .ButtonCustom.Selected {
+        background-color: @fadegreen;
+        border: none;
+      }
+      .ButtonCustom.Selected:hover {
+        background-color: @fadegreen;
+      }
+    }
+    .Form-Wrap {
+      flex-wrap: wrap;
+    }
+    //chip
+    .Chip {
+      width: fit-content;
+      height: 24px;
+      border-radius: 12px;
+      background-color: @gray95;
+      padding: 6px;
+      margin: 2px;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      text-transform: capitalize;
+
+      .ChipName {
+        padding: 6px;
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    // selected filter Chips
+    .SelectedFilterChips {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    // Filter
+    .VtsFilter {
+      padding: 20px;
+      line-height: 1;
+
+      .Arrow-Up {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid white;
+      }
+      .ant-dropdown-menu-item:hover,
+      .ant-dropdown-menu-submenu-title:hover {
+        background-color: #ffffff !important;
+      }
+
+      .ant-dropdown-menu-item .ant-dropdown-menu-item-active {
+        background-color: #ffffff !important;
+      }
+
+      .ant-dropdown .ant-dropdown-placement-bottomLeft {
+        left: 245px;
+      }
+
+      .ant-menu {
+        line-height: 1;
+      }
+
+      .SelectDrop .SelectWrap {
+        width: 240px;
+      }
+
+      .SelectDrop .Select {
+        width: 240px;
+        top: 9px;
+        cursor: default;
+      }
+
+      .DropList {
+        margin-top: 8px;
+      }
+      .SelectDrop .LabelText {
+        color: @gray50;
+      }
+
+      .SelectDrop .Drop-Arrow {
+        top: 16px;
+      }
+
+      .SelectDrop .SelectedItem .SelectedItemName {
+        margin-top: 5px;
+      }
+
+      .Button-Width {
+        min-width: 116px;
+      }
+
+      .ToggleSelect {
+        width: 238px;
+      }
+
+      .ToggleSelect .ToggleSelect__Label {
+        margin-bottom: 7px;
+      }
+
+      .ToggleSelect .ButtonCustom {
+        width: 116px;
+      }
+
+      .Button-Icon {
+        vertical-align: middle;
+        margin-right: 9px;
+      }
+
+      .Button-Label {
+        font-weight: bold;
+        color: @matterhorn;
+        font-size: 1rem;
+        letter-spacing: 0.2px;
+      }
+
+      .Button-Label-Cancel {
+        font-weight: bold;
+        color: @red;
+        font-size: 1rem;
+        letter-spacing: 0.2px;
+      }
+
+      .Arrow-Filter-Position {
+        position: absolute;
+        top: -10px;
+        left: 243px;
+      }
+    }
+    .VtsSetting {
+      padding: 20px;
+      line-height: 1;
+
+      .Arrow-Up {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid white;
+      }
+      .ant-dropdown-menu-item:hover,
+      .ant-dropdown-menu-submenu-title:hover {
+        background-color: #ffffff !important;
+      }
+
+      .ant-dropdown-menu-item .ant-dropdown-menu-item-active {
+        background-color: #ffffff !important;
+      }
+
+      .ant-dropdown .ant-dropdown-placement-bottomLeft {
+        left: 245px;
+      }
+
+      .ant-menu {
+        line-height: 1;
+      }
+
+      .SelectDrop .SelectWrap {
+        width: 240px;
+      }
+
+      .SelectDrop .Select {
+        width: 240px;
+        top: 9px;
+        cursor: default;
+      }
+
+      .DropList {
+        margin-top: 8px;
+      }
+      .SelectDrop .LabelText {
+        color: @gray50;
+      }
+
+      .SelectDrop .Drop-Arrow {
+        top: 16px;
+      }
+
+      .SelectDrop .SelectedItem .SelectedItemName {
+        margin-top: 5px;
+      }
+
+      .Button-Width {
+        min-width: 116px;
+      }
+
+      .ToggleSelect {
+        width: 238px;
+      }
+
+      .ToggleSelect .ToggleSelect__Label {
+        margin-bottom: 7px;
+      }
+
+      .ToggleSelect .ButtonCustom {
+        width: 116px;
+      }
+
+      .Button-Icon {
+        vertical-align: middle;
+        margin-right: 9px;
+      }
+
+      .Button-Label {
+        font-weight: bold;
+        color: @matterhorn;
+        font-size: 1rem;
+        letter-spacing: 0.2px;
+      }
+
+      .Button-Label-Cancel {
+        font-weight: bold;
+        color: @red;
+        font-size: 1rem;
+        letter-spacing: 0.2px;
+      }
+
+      .Arrow-Filter-Position {
+        position: absolute;
+        top: -10px;
+        left: 243px;
+      }
+    }
+    // Vts DashBoardFilter
+    .VtsDashBoardFilter {
+      width: 794px;
+      .DropList {
+        margin-top: 2px;
+      }
+
+      .SelectDrop {
+        .SelectWrap {
+          width: 238px;
+        }
+        .Select {
+          width: 238px;
+          top: 6px;
+        }
+        .Drop-Arrow {
+          top: 15px;
+        }
+      }
+    }
+    // Tracking Alert Filter
+    .TrackingAlertsFilter {
+      width: 794px;
+      .DropList {
+        margin-top: 2px;
+      }
+
+      .SelectDrop {
+        .SelectWrap {
+          width: 238px;
+        }
+        .Select {
+          width: 238px;
+          top: 6px;
+        }
+        .Drop-Arrow {
+          top: 15px;
+        }
+      }
+    }
+
+    // GPS Report Filter
+    .GPSReportFilter {
+      width: 794px;
+      .DropList {
+        margin-top: 2px;
+      }
+
+      .SelectDrop {
+        .SelectWrap {
+          width: 238px;
+        }
+        .Select {
+          width: 238px;
+          top: 6px;
+        }
+        .Drop-Arrow {
+          top: 15px;
+        }
+      }
+    }
+    .Vts-Form-Master {
+      .InputText-Native .InputText-Native__Label,
+      .Switch .Switch__Label,
+      .Input .Input__Label {
+        font-size: 0.875rem;
+        color: @gray99;
+        line-height: 1;
+      }
+
+      .InputText-Native {
+        height: auto;
+        min-height: 58px;
+        width: 275px;
+        margin-bottom: 20px;
+        input {
+          color: @graydark;
+          font-size: 1rem;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        input:disabled {
+          cursor: not-allowed;
+          opacity: 0.5;
+        }
+      }
+
+      .Input {
+        height: auto;
+        min-height: 58px;
+        width: 275px;
+        margin-bottom: 20px;
+        .ant-input {
+          color: @graydark;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
+
+      .DatePicker {
+        height: auto;
+        min-height: 78px;
+      }
+      .Switch {
+        display: block;
+      }
+      .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+        color: @matterhorn;
+      }
+
+      .FormAction {
+        display: flex;
+        justify-content: flex-end;
+        align-items: stretch;
+        margin-right: 10px;
+
+        .Cancel {
+          min-width: 116px;
+
+          .Icon {
+            margin-right: 9px;
+            vertical-align: middle;
+            letter-spacing: 0.2px;
+          }
+        }
+
+        .Save {
+          min-width: 108px;
+
+          .Icon {
+            margin-right: 12px;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+    .Cluster__Form {
+      margin-left: -10px;
+      margin-right: -10px;
+      .Field {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .Input {
+        display: block;
+      }
+      .ProtocolUsed{
+        .SelectedItemsWrap {
+          width: 540px;
+        }
+      }
+    }
+    .Cluster {
+      height: 100%;
+      div {
+        display: flex;
+      }
+      .ContentWrap {
+        display: block;
+        width: 100%;
+        div {
+          display: block;
+        }
+      }
+      .ant-tabs {
+        flex-direction: column;
+        width: 100%;
+      }
+      .List {
+        width: 100%;
+      }
+      .Common__Components__ShowMoreText {
+        display: block;
+        width: 100%;
+      }
+    }
+    // Service Status Settings 
+  .ServiceStatusSettings {
+    width: 536px;
+    .DropList {
+      margin-top: 2px;
+    }
+
+    .SelectDrop {
+      .SelectWrap{
+        width: 238px;
+      }
+      .Select {
+        width: 238px;
+        top: 6px;
+      }
+      .Drop-Arrow {
+        top: 15px;
+      }
+    }  
+  }
+  .TrackingAlertReportFilter {
+    width: 536px;
+    .DropList {
+      margin-top: 2px;
+    }
+
+    .SelectDrop {
+      .SelectWrap{
+        width: 238px;
+      }
+      .Select {
+        width: 238px;
+        top: 6px;
+      }
+      .Drop-Arrow {
+        top: 15px;
+      }
+    }  
+  }
+  .TrackingAlertSetting {
+    width: 573px;
+    .Input{
+      width: 275px;
+    } 
+  }
+  .VtsDashboardSetting {
+    width: 573px;
+    .Input{
+      width: 275px;
+    } 
+  }
+  .ListActionToggleSelect{
+    padding: 5px;
+    height: 40px;
+    .ToggleSelect{
+      .ButtonCustom.Selected {
+        background-color: @skyblue !important;
+        color: @white;
+        font-weight: normal;
+      }
+      .ButtonCustom{
+        height: 30px;
+        width: 65px;
+        border: none !important;
+      }
+    } 
+  }
+  .NearbyErvList{
+    .ContentWrap {
+      min-height: 209px;
+    }
+  }
+    // tab
+  .ant-tabs-nav .ant-tabs-tab-active:hover,
+  .ant-tabs-nav .ant-tabs-tab-active:focus,
+  .ant-tabs-nav .ant-tabs-tab:active,
+  .ant-tabs-nav .ant-tabs-tab-active {
+    color: @matterhorn;
+    font-weight: bold;
+  }
+  .ant-tabs-nav .ant-tabs-tab:hover {
+    color: @matterhorn;
+  }
+  .ant-tabs-nav .ant-tabs-tab-disabled:active,
+  .ant-tabs-nav .ant-tabs-tab-disabled:hover {
+    color: rgba(0, 0, 0, 0.25);
+  }
+  .ant-tabs-ink-bar {
+    background: @matterhorn;
+  }
+  .ant-tabs-nav .ant-tabs-tab {
+    font-size: 1rem;
+    margin-right: 22px;
+    letter-spacing: 0.3px;
+  }
+
+  .ant-tabs-bar {
+    border-bottom: 1px solid @gray90; 
+    margin-bottom: 13px;
+  }
+
+  .Green-Text {
+    color: @green;    
+  }
+
+  .Matterhorn-Text {
+    color: @matterhorn;
+  }
+
+  .Warmblue-Text {
+    color: @warmblue;
+    a {
+      color: @warmblue;
+    }
+  }
+    //
+  .ant-btn-change {
+    background-color: @highlight-color;
+    color: @matterhorn;
+    box-shadow: @box-shadow-secondary;
+    padding-left: 24px;
+    padding-right: 24px; 
+  }
+
+  .ant-btn-change:focus,
+  .ant-btn-change:hover,
+  .ant-btn-change:active {
+    background-color: @matterhorn;
+    color: #ffffff;
+  }
+  .ant-btn[disabled] {
+    color: rgba(0, 0, 0, 0.25);
+    background-color: #f5f5f5;
+    border-color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+  }
+  .DistanceReports__PerformanceStats{
+    .ant-tabs-nav .ant-tabs-tab {
+      font-size: 1.25rem;
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+  }
+  .DistanceReports__PerformanceStats{
+    .ToggleSelect {
+      .ToggleSelect__ButtonContainer{
+        flex-direction: column;
+        .ButtonCustom {
+          margin-left: 0px !important;
+          margin-bottom: 15px;
+          width: 150px;
+          height: 40px;
+        }
+        .Selected{
+          background-color: @skyblue;
+          color: @white;
+        }
+      }
+    }
+  }
+  .TripReplayWrap {
+    .Field {
+      width: 275px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .SearchPrameterDropDown {
+      .DropList {
+        z-index: 1000 !important;
+      }
+    }
+    .VtsProcessing {
+      .Input__Value {
+        margin-left: 20px;
+      }
+    }
+    .Green {
+      .Input__Value {
+        color: #60db91;
+      }
+    }
+    .Red {
+      .Input__Value {
+        color: red;
+      }
+    }
+    .VtsDateRangePicker{
+      height: 78px;
+    }
+    .ant-checkbox {
+      border: solid 1px @gray40;
+    }
+
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background-color: @highlight-color;
+      border-radius: 2px;
+    }
+
+    .ant-checkbox-checked:after {
+      --antd-wave-shadow-color: @matterhorn;
+      border: unset;
+    }
+
+    .ant-checkbox-checked .ant-checkbox-inner::after {
+      border: 1.5px solid @matterhorn;
+      border-top: 0;
+      border-left: 0;
+    }
+    .InputText-Native .InputText-Native__Label,
+    .Switch .Switch__Label,
+    .Input .Input__Label {
+      font-size: 0.875rem;
+      color: @gray99;
+    }
+    
+    .InputText-Native {
+      height: auto;
+      min-height: 58px;
+      width: 275px;
+      margin-bottom: 20px;
+      input {
+        color: @graydark;
+        font-size: 1rem;
+        padding-top: 10px;
+        padding-bottom: 10px;  
+      }
+      input:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+    }
+  
+    .Input {
+      height: auto;
+      min-height: 58px;
+      width: 275px;
+      .ant-input {
+        color: @graydark;
+        font-size: 1rem;
+        padding-top: 10px;
+        padding-bottom: 10px;  
+      }
+    }
+  
+    .DatePicker {
+      height: auto;
+      min-height: 78px;
+    }
+    .Switch {
+      display: block;
+    }
+    .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+      color: @matterhorn;
+    }
+
+    .VtsTripReplayModal {
+      height: 542px;
+      width: 100%;
+      padding: 20px;
+      .TripReaplayHeading {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+      .Map-Height {
+        z-index: 1;
+        height: 100%;
+      }
+    }
+    .VtsTripSummary {
+      padding: 10px;
+      .TripSummaryHeading {
+        text-transform: uppercase;
+      }
+      .TripSummaryDetials{
+        .Field {
+          width: 163px;
+          margin: 10px;
+        }
+        .Input {
+          width: 150px;
+          height: auto;
+        }
+      }
+    }
+    .VtsTripMilestone {
+      padding: 20px;
+      .TripMilestoneHeading{
+        text-transform: uppercase;
+      }
+      .TripMilestoneDetails_Header{
+        border: solid 1px @smokewhite;
+        align-items: center;
+        padding: 5px 5px;
+        div {
+          word-break: break-all; 
+        }
+      }
+      .TripMilestoneDetails_Header_Item{
+        font-weight: bold;
+        color: @gray50;
+      }
+      .TripMilestoneDetails_Row{
+        padding: 5px 5px;
+        div {
+          word-break: break-all; 
+        }
+      }
+    }
+    .Cluster__Form {
+      margin-left: -10px;
+      margin-right: -10px;
+      .Field {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .Input {
+        display: block;
+      }
+      .ProtocolUsed{
+        .SelectedItemsWrap {
+          width: 540px;
+        }
+      }
+    }
+  }
+
+    .CommonHeader {
+      // header
+      .Header_Wrapper{
+        width: 100%;
+        height: 300px;
+        background-image: url('/biharNhmDashboard/bg-dashboard-BIHAR.png');
+        background-repeat: no-repeat;
+        background-color: #fff;
+        background-size: 100% 100%;
+        z-index: -1;
+        .Header_Logo{
+            height: 200px;
+        }
+        .mediumScreen({
+            .Header_Logo{
+                height: 67px;
+            }
+        })
+      }
+
+      // sub header
+      .SubHeaderWrapper{
+        .SubHeader{
+            background: #F3F5F7;
+            padding: 5px;
+            border: 2px solid #E4E4E7;
+            // border-radius: 4px;
+            // margin-top: 140px;
+            margin-top: -10px;
+        }
+        .ButtonCustom {
+            background-color: transparent;
+            padding: 5px 20px;
+        }
+        .Divider{
+            border: 1px solid #ff7606;
+        }
+        .mediumScreen({
+            .SubHeader {
+                margin-top: -90px;
+            }
+        })
+      }
+    }
+
+    .NhmDashboardWrapper {
+      // Data Card
+      .DataCardWrapper{
+        margin: 12px 0px;
+        // height: 92%;
+        border-radius: 4px;
+        border: 1px solid #DDDDDD;
+        .DataCard{
+            height: 100%;
+            width: 305px;
+        }
+        .DataCard__Value {
+            font-size: 26px;
+            font-weight: 600;
+            line-height: 31.2px;
+        }
+        .Icon {
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+        .DataCard__Title {
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 27px;
+        }
+        .TabHeader {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+        }
+        .Align_Self_End {
+          align-self: end;
+        }
+      }
+
+      // Data tile
+      .DataTileWrapper {
+        margin: 5px 0px;
+        border: 1px solid #DDDDDD;
+        border-radius: 4px;
+        .Head {
+          font-size: 0.875rem;
+          padding: 9.5px 16px;
+          text-align: start;
+          font-weight: 600;
+          line-height: 1.313rem;
+        }
+        .Column {
+          min-height: 55px;
+          text-align: center;
+          padding: 16px;
+        }
+        .ColumnOne {
+          border-right: 1px solid;
+        }
+        .KeyStyle {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 16.8px;
+          color: #52525B;
+        }
+        .ValueStyle {
+          font-size: 40px;
+          font-weight: 500;
+          line-height: 48px;
+          color: @neutralDark;
+        }
+      }
+
+      // Data table
+      .DataTableWrapper {
+        margin: 5px 0px;
+        border: 1px solid #DDDDDD;
+        border-radius: 4px;
+        .ListRow {
+          .ListText {
+            color: @neutralDark;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 500;
+            padding: 0px 40px;
+            height: 70px;
+            font-size: 40px;
+            line-height: 48px;
+          }
+          tr,td {
+            border-left: 1px solid;
+            border-right: 1px solid;
+          }
+        }
+        .HeaderRow {
+          .HeaderText {
+            color: #fff;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 0.875rem;
+            padding: 10px;
+            height: 70px;
+          }
+          th,td {
+            border-left: 1px solid;
+            border-right: 1px solid;
+          }
+        }
+      }
+
+      // Detail tile
+      .DetailTileWrapper {
+        margin: 5px 0px;
+        border: 1px solid #DDDDDD;
+        border-radius: 4px;
+        .Head {
+          font-size: 0.875rem;
+          padding: 9.5px 16px;
+          text-align: start;
+          font-weight: 600;
+          line-height: 1.313rem;
+        }
+        .Column {
+          min-height: 55px;
+          text-align: center;
+          padding: 16px;
+        }
+        .ColumnOne {
+          border-right: 1px solid;
+        }
+        .KeyStyle {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 16.8px;
+          color: #52525B;
+        }
+        .keyStyleTwo {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 22.4px;
+          color: #52525B;
+        }
+        .ValueStyleOne {
+          color: @neutralDark;
+          font-weight: 600;
+          font-size: 64px;
+          line-height: 76.8px;
+        }
+        .NeutralDark {
+          color: @neutralDark;
+        }
+        .ViewChart {
+          padding: 12px 16px;
+          border-top: 1px solid #DDDDDD;
+        }
+        .ViewChartText {
+          color: @blue;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+      .DashboardHeader {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38.4px;
+      }
+      .ant-tabs-ink-bar .ant-tabs-ink-bar-animated {
+        display: none;
+        width: 0px;
+      }
+      
+      .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
+        background: #F3F5F7;
+      }
+      
+      .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active {
+        background: @white;
+        color: @neutralDark;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+      
+      .card-container p {
+        margin: 0;
+      }
+      .card-container > .ant-tabs-card .ant-tabs-content {
+        margin-top: -16px;
+      }
+      .card-container > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+        padding: 16px;
+        background: @white;
+      }
+      .card-container > .ant-tabs-card > .ant-tabs-nav::before {
+        display: none;
+      }
+      .card-container > .ant-tabs-card .ant-tabs-tab,
+      [data-theme='compact'] .card-container > .ant-tabs-card .ant-tabs-tab {
+        background: transparent;
+        border-color: transparent;
+      }
+      
+      .card-container > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane { 
+        padding: 0px 80px;
+        background-color: @white;
+      }
+      .card-container > .ant-tabs-card .ant-tabs-tab-active,
+      [data-theme='compact'] .card-container > .ant-tabs-card .ant-tabs-tab-active {
+        background: @white;
+        border-color: @white;
+      }
+      #components-tabs-demo-card-top .code-box-demo {
+        padding: 24px;
+        overflow: hidden;
+        background: @smokewhite;
+      }
+      [data-theme='compact'] .card-container > .ant-tabs-card .ant-tabs-content {
+        margin-top: -8px;
+      }
+      [data-theme='dark'] .card-container > .ant-tabs-card .ant-tabs-tab {
+        background: transparent;
+        border-color: transparent;
+      }
+      [data-theme='dark'] #components-tabs-demo-card-top .code-box-demo {
+        background: @black;
+      }
+      [data-theme='dark'] .card-container > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+        background: #141414;
+      }
+      [data-theme='dark'] .card-container > .ant-tabs-card .ant-tabs-tab-active {
+        background: #141414;
+        border-color: #141414;
+      }
+    }
+
+    .EquipmentStatusWrapper {
+      // List wrapper
+      .ListWrapper {
+        // List Header Row Wrapper
+        .ListHeaderRowWrapper {
+          .ListHeaderRowText {
+            border: 1px solid #fff;
+            vertical-align: middle;
+            text-align: center;
+            background-color: #ff9934;
+            padding: 5px;
+            height: 40px;
+          }
+        }
+
+        // List Body Row Wrapper
+        .ListBodyRowWrapper {
+          .ListBodyRowText {
+            border: 1px solid #fff;
+            vertical-align: middle;
+            text-align: center;
+            background-color: #f6deb2;
+            padding: 8px;
+            height: 40px;
+          }
+
+          .ListBodyRowBgColor {
+            background-color: #fecf9f;
+          }
+        }
+      }
+
+      .ExcelButton {
+        background-color: orange;
+        width: 80px;
+      } 
+    }
+
+    .TotalFeedbackTakenWrapper{
+      .Form {
+        border: 2px #DDDDDD solid;
+        padding: 5px;
+        border-radius: 4px;
+      }
+      .TotalFeedbackTakenFilterWrap{
+        .DateRangePickerField{
+          .VtsDateRangePicker {
+            flex-direction: row !important;
+            align-items: center;
+            width: 400px;
+            .DateRangePicker__Label {
+              font-size: 1rem;
+              width: 20%;
+              color: #337ab7;
+              margin-bottom: 0px;
+              font-weight: bold;
+            }
+            .ant-picker{
+              position: relative !important;
+              top: 0px;
+              width: 100%;
+            }
+            .DateRangePicker__Error{
+              bottom: -5px;
+              left: 17%;
+            }
+          }
+          .smallScreen({
+            .VtsDateRangePicker{
+              flex-direction: column !important;
+              .DateRangePicker__Label {
+                align-self: flex-start;
+              }
+              .DateRangePicker__Error{
+                bottom: -15px;
+                left: 0px;
+              }
+            }
+          });
+        }
+        .ButtonCustom {
+          height: 36px;
+          background-color: orange;
+          border: #d2d6de 1px solid;
+          border-radius: 10px;
+          padding: 0px 40px;
+        }
+      }
+      .ExcelButton {
+        background-color: orange;
+        width: 80px;
+      }
+    }
+    .MedicineInventoryWrapper{
+      .MedicineInventoryFilterWrap{
+        .Form {
+          border: 2px #f59c12 solid;
+          padding: 5px;
+          border-radius: 4px;
+        }
+        .DateRangePickerField{
+          .VtsDatePicker {
+            flex-direction: row !important;
+            align-items: center;
+            width: 100%;
+            
+            .DatePicker__Label {
+              font-size: 1rem;
+              width: 50%;
+              color: #337ab7;
+              margin-bottom: 0px;
+              font-weight: bold;
+            }
+            .ant-picker{
+              position: relative !important;
+              top: 0px;
+              width: 100%;
+            }
+            .DatePicker__Error{
+              bottom: -14px;
+            }
+          }
+          .smallScreen({
+            .VtsDatePicker{
+              flex-direction: column !important;
+              .DatePicker__Label {
+                align-self: flex-start;
+              }
+            }
+          });
+        }
+
+        .SelectDrop {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          min-height: 60px;
+          .LabelText {
+            font-size: 1rem;
+            color: #337ab7;
+            margin-bottom: 0px;
+            width: 50%;
+            font-weight: bold;
+          }
+          .SelectWrap {
+            width: 100%;
+            top: -25px;
+            .Select{
+              width: 100%;
+            }
+          }
+          .DropList{
+            width: 100%;
+            word-break: break-all;
+          }
+        }
+
+        .smallScreen({
+          .SelectDrop{
+            flex-direction: column !important;
+            .SelectWrap{
+              top: 0px;
+            }
+            .LabelText{
+              width: 80%;
+              align-self: flex-start
+            }
+          }
+        });
+        .ButtonCustom {
+          height: 36px;
+          background-color: orange;
+          border: #d2d6de 1px solid;
+          border-radius: 10px;
+          padding: 0px 40px;
+        }
+      }
+      .ExcelButton {
+        background-color: orange;
+        width: 80px;
+      }
+    }
+    .AlsSummaryWrapper{
+      .MedicineInventoryFilterWrap{
+        .Form {
+          border: 2px #f59c12 solid;
+          padding: 5px;
+          border-radius: 4px;
+        }
+        .DateRangePickerField{
+          .VtsDateRangePicker {
+            flex-direction: row !important;
+            align-items: center;
+            width: 400px;
+            
+            .DateRangePicker__Label {
+              font-size: 1rem;
+              width: 20%;
+              color: #337ab7;
+              margin-bottom: 0px;
+              font-weight: bold;
+            }
+            .ant-picker{
+              position: relative !important;
+              top: 0px;
+              width: 100%;
+            }
+            .DateRangePicker__Error{
+              bottom: -10px;
+              left: 17%;
+            }
+          }
+          .smallScreen({
+            .VtsDateRangePicker{
+              flex-direction: column !important;
+              .DateRangePicker__Label {
+                align-self: flex-start;
+              }
+              .DateRangePicker__Error{
+                bottom: -15px;
+                left: 0px;
+              }
+            }
+          });
+        }
+        .DateRangePickerField{
+          .VtsDatePicker {
+            flex-direction: row !important;
+            align-items: center;
+            width: 100%;
+            
+            .DatePicker__Label {
+              font-size: 1rem;
+              width: 50%;
+              color: #337ab7;
+              margin-bottom: 0px;
+              font-weight: bold;
+            }
+            .ant-picker{
+              position: relative !important;
+              top: 0px;
+              width: 100%;
+            }
+            .DatePicker__Error{
+              bottom: -14px;
+            }
+          }
+          .smallScreen({
+            .VtsDatePicker{
+              flex-direction: column !important;
+              .DatePicker__Label {
+                align-self: flex-start;
+              }
+            }
+          });
+        }
+
+        .SelectDrop {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          min-height: 60px;
+          .LabelText {
+            font-size: 1rem;
+            color: #337ab7;
+            margin-bottom: 0px;
+            width: 50%;
+            font-weight: bold;
+          }
+          .SelectWrap {
+            width: 100%;
+            top: -25px;
+            .Select{
+              width: 100%;
+            }
+          }
+          .DropList{
+            width: 100%;
+            word-break: break-all;
+          }
+        }
+
+        .smallScreen({
+          .SelectDrop{
+            flex-direction: column !important;
+            .SelectWrap{
+              top: 0px;
+            }
+            .LabelText{
+              width: 80%;
+              align-self: flex-start
+            }
+          }
+        });
+        .ButtonCustom {
+          height: 36px;
+          background-color: orange;
+          border: #d2d6de 1px solid;
+          border-radius: 10px;
+          padding: 0px 40px;
+        }
+      }
+      .ExcelButton {
+        background-color: orange;
+        width: 80px;
+      }
+      .ListMaster__Header__Item{
+        min-width: 103px;
+      }
+    }
+    .AlsDailyDetailWrapper{
+      .ListMaster__Header__Item{
+        min-width: 103px;
+      }
+      .MedicineInventoryFilterWrap{
+        .Form {
+          border: 2px #f59c12 solid;
+          padding: 5px;
+          border-radius: 4px;
+        }
+        .DateRangePickerField{
+          .VtsDateRangePicker {
+            flex-direction: row !important;
+            align-items: center;
+            width: 400px;
+            
+            .DateRangePicker__Label {
+              font-size: 1rem;
+              width: 20%;
+              color: #337ab7;
+              margin-bottom: 0px;
+              font-weight: bold;
+            }
+            .ant-picker{
+              position: relative !important;
+              top: 0px;
+              width: 100%;
+            }
+            .DateRangePicker__Error{
+              bottom: -10px;
+              left: 17%;
+            }
+          }
+          .smallScreen({
+            .VtsDateRangePicker{
+              flex-direction: column !important;
+              .DateRangePicker__Label {
+                align-self: flex-start;
+              }
+              .DateRangePicker__Error{
+                bottom: -15px;
+                left: 0px;
+              }
+            }
+          });
+        }
+        .DateRangePickerField{
+          .VtsDatePicker {
+            flex-direction: row !important;
+            align-items: center;
+            width: 100%;
+            
+            .DatePicker__Label {
+              font-size: 1rem;
+              width: 50%;
+              color: #337ab7;
+              margin-bottom: 0px;
+              font-weight: bold;
+            }
+            .ant-picker{
+              position: relative !important;
+              top: 0px;
+              width: 100%;
+            }
+            .DatePicker__Error{
+              bottom: -14px;
+            }
+          }
+          .smallScreen({
+            .VtsDatePicker{
+              flex-direction: column !important;
+              .DatePicker__Label {
+                align-self: flex-start;
+              }
+            }
+          });
+        }
+
+        .SelectDrop {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          min-height: 60px;
+          .LabelText {
+            font-size: 1rem;
+            color: #337ab7;
+            margin-bottom: 0px;
+            width: 50%;
+            font-weight: bold;
+          }
+          .SelectWrap {
+            width: 100%;
+            top: -25px;
+            .Select{
+              width: 100%;
+            }
+          }
+          .DropList{
+            width: 100%;
+            word-break: break-all;
+          }
+        }
+
+        .smallScreen({
+          .SelectDrop{
+            flex-direction: column !important;
+            .SelectWrap{
+              top: 0px;
+            }
+            .LabelText{
+              width: 80%;
+              align-self: flex-start
+            }
+          }
+        });
+        .ButtonCustom {
+          height: 36px;
+          background-color: orange;
+          border: #d2d6de 1px solid;
+          border-radius: 10px;
+          padding: 0px 40px;
+        }
+      }
+      .ExcelButton {
+        background-color: orange;
+        width: 80px;
+      }
+      .ImagePreviewModal{
+        .ant-modal-body{
+          position: relative;
+        }
+        .DownloadIcon{
+          background: white;
+          z-index: 20;
+          position: absolute;
+          top: 50px;
+          right: 30px;
+          padding: 5px;
+        }
+      }
+    }
+    .EquipmentDailyStatusWrapper {
+      .FormWrapper {
+        .Form {
+          border: 2px #f59c12 solid;
+          padding-bottom: 10px;
+          border-radius: 4px;
+        }
+        .ButtonCustom {
+          width: 80%;
+          background-color: #fea600;
+          border: #d2d6de 1px solid;
+          border-radius: 10px;
+          margin: 8px auto;
+        }
+        .DateRangePickerField{
+          .VtsDateRangePicker {
+            flex-direction: row !important;
+            align-items: center;
+            width: 400px;
+            
+            .DateRangePicker__Label {
+              font-size: 1rem;
+              width: 50%;
+              color: #337ab7;
+              margin-bottom: 0px;
+              font-weight: bold;
+            }
+            .ant-picker{
+              position: relative !important;
+              top: 0px;
+              width: 100%;
+            }
+            .DateRangePicker__Error{
+              bottom: -10px;
+              left: 33%;
+            }
+          }
+          .smallScreen({
+            .VtsDateRangePicker{
+              flex-direction: column !important;
+              .DateRangePicker__Label {
+                align-self: flex-start;
+              }
+              .DateRangePicker__Error{
+                bottom: -15px;
+                left: 0px;
+              }
+            }
+          });
+        }
+      }
+
+      .ExcelButton {
+        background-color: orange;
+        width: 80px;
+      }
+    }
+
+    .OffRoadCountDetailWrapper {
+      .ExcelButton {
+        background-color: orange;
+        width: 80px;
+      }
+    }
+
+    .OffRoadDetailsWrapper {
+      .ExcelButton {
+        background-color: orange;
+        width: 80px;
+      }
+
+      .FormWrapper {
+        .Form {
+          border: 2px #f59c12 solid;
+          padding-bottom: 10px;
+          border-radius: 4px;
+        }
+        .ButtonCustom {
+          width: 80%;
+          background-color: #fea600;
+          border: #d2d6de 1px solid;
+          border-radius: 10px;
+          margin: 8px auto;
+        }
+        .DateRangePickerField{
+          padding: 0px 12px;
+          .VtsDatePicker {
+            flex-direction: row !important;
+            align-items: center;
+            width: 100%;
+            
+            .DatePicker__Label {
+              font-size: 1rem;
+              width: 25%;
+              color: #337ab7;
+              margin-bottom: 0px;
+              font-weight: bold;
+            }
+            .ant-picker{
+              position: relative !important;
+              top: 0px;
+              width: 60%;
+            }
+            .DatePicker__Error{
+              bottom: -14px;
+            }
+          }
+          .smallScreen({
+            .VtsDatePicker{
+              flex-direction: column !important;
+              .DatePicker__Label {
+                align-self: flex-start;
+              }
+              .ant-picker{
+                width: 100%;
+              }
+            }
+          });
+        }
+      }
+    }
+    
+    .MonthlyOffroadWrapper {
+      padding: 0px 12px 0px 22px !important;
+      .VtsDatePicker {
+        .DatePicker__Label {
+          width: 25% !important;
+        }
+        .ant-picker{
+          width: 60% !important;
+        }
+      }
+      .smallScreen({
+        .VtsDatePicker{
+          .ant-picker {
+            width: 100% !important;
+          }
+        }
+      });
+    }
+
+    .BarChartWrapper {
+      .BarChart {
+        border: 1px solid;
+        border-radius: 5px;
+      }
+      .BarChart__Title {
+        padding: 9.5px 16px;
+      }
+      .BarChart__Canvas {
+        padding: 20px;
+      }
+      .Legend{
+        padding: 10px 20px;
+        .Legend_Item{
+          padding: 5px;
+        }
+        .LegendColor{
+          height: 16px;
+          width: 16px;
+          margin-right: 10px;
+          border-radius: 5px;
+        }
+      }
+      .mapButton {
+        margin: 0px 5px;
+        padding: 0px 5px;
+        cursor: 'pointer';
+        font-weight: 800;
+        font-size: 25px;
+      }
+      .controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+
+    .ChiefComplaintTableWrapper {
+      .ChiefComplaintTable {
+        border-radius: 5px;
+      }
+      .ChiefComplaintTable__Title {
+        padding: 9.5px 16px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border: 1px solid #DDDDDD;
+      }
+      .ChiefComplaintTableWrapper {
+        max-height: 450px;
+        overflow-y: auto;
+      }
+      .ChiefComplaintTable{
+        td, th {
+          border: 1px solid #DDDDDD;
+        }
+      }
+    }
+
+    .NonAvailabilityOfMedicinesWrapper {
+      .DateRangePicker {
+        padding: 0px 12px;
+        .VtsDateRangePicker {
+          flex-direction: row !important;
+          align-items: center;
+          width: 400px;
+          
+          .DateRangePicker__Label {
+            font-size: 1rem;
+            width: 50%;
+            color: #337ab7;
+            margin-bottom: 0px;
+            font-weight: bold;
+          }
+          .ant-picker{
+            position: relative !important;
+            top: 0px;
+            width: 100%;
+          }
+          .DateRangePicker__Error{
+            bottom: -10px;
+            left: 33%;
+          }
+        }
+      }
+      .smallScreen({
+        .DateRangePicker {
+          width: 100%;
+          .VtsDateRangePicker{
+            flex-direction: column !important;
+            width: 100%;
+            .DateRangePicker__Label {
+              align-self: flex-start;
+            }
+            .DateRangePicker__Error{
+              bottom: -15px;
+              left: 0px;
+            }
+          }
+        }
+      });
+    }
+    .JobwiseErrorWrapper{
+      .DateRangePicker__Error{
+        bottom: -5px !important;
+        left: 17%;
+      }
+    }
+  }
+  //end of ZiqitzaVTS
+  .Vts_ListAction_Dropdown {
+    .ant-select-item-option-selected {
+      background-color: transparent !important;
+    }
+  }
+
+  .VtsListFilter-Position-left {
+    .ant-menu {
+      left: 144px;
+      top: 17px;
+      position: relative;
+      box-shadow: @box-shadow-dropbox;
+    }
+  }
+  .VtsListFilter-Position-right {
+    .ant-menu {
+      right: 205px;
+      top: 17px;
+      position: relative;
+      box-shadow: @box-shadow-dropbox;
+    }
+  }
+  .VtsListFilter-Position-left .ant-menu.ServiceStatusSettingWrap {
+    left: 15px;
+  }
+  
+  .VtsListFilter-Position-left .ant-menu.TrackingAlertReportFilterWrap {
+    left: 15px;
+  }
+  .VtsListSetting-Position-left {
+    .ant-menu {
+      left: 144px;
+      top: 17px;
+      position: relative;
+      box-shadow: @box-shadow-dropbox;
+    }
+  }
+  .VtsListSetting-Position-right {
+    .ant-menu {
+      right: 205px;
+      top: 17px;
+      position: relative;
+      box-shadow: @box-shadow-dropbox;
+    }
+  }
+  
+  .VtsListSetting-Position-left .ant-menu.TrackingAlertSettingWrap {
+    left: 34px;
+  }
+  .VtsListSetting-Position-left .ant-menu.VtsDashboardSettingWrap {
+    left: 34px;
+  }
+  
+  //ant notification
+  .ant-notification {
+    width: 300px;
+    margin-right: 40px;
+  }
+
+  .Vts-Notification.ant-notification-notice {
+    padding-left: 10px;
+    line-height: 1;
+    svg {
+      vertical-align: middle;
+    }
+    .ant-notification-notice-with-icon {
+      .ant-notification-notice-message {
+        margin-left: 34px;
+        font-size: 1rem;
+        color: @error-color;
+        font-weight: bold;
+      }
+      .ant-notification-notice-description {
+        margin-left: 34px;
+        font-size: 0.875rem;
+        margin-right: 20px;
+      }
+    }
+    .Vts__Components__Notification__SpanId {
+      color: @red;
+    }
+  }
+
+  .Vts-Notification.success {
+    .ant-notification-notice-with-icon .ant-notification-notice-message {
+      color: @success-color;
+    }
+  }
+
+  //SummaryModal
+  .Summary-Modal{
+    .ant-modal-close {
+      top: 0px,
+    }
+    .ant-modal-body {
+      padding-top: 22px;
+    }
+    .VtsDatePicker {
+      width: 305px;
+      .DatePicker__Label {
+        color: #337ab7;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  //AlertReasonModal
+  .Alert-Reason-Modal{
+    .ant-modal-close-icon {
+      font-size: 1.4375rem;
+      color: black;
+    }
+    .ant-modal-body {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px
+    }
+    .Field {
+      width: 275px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+    }
+    .NoteField{
+      .Input {
+        display: block;
+        width: 570px;
+      }
+    }
+    .Input {
+      display: block;
+      width: 273px;
+
+      .Input__Label {
+        font-size: 0.875rem;
+      }
+    }
+  }
+  // Alert-Reason-Vehicle-detail-Modal
+  .Alert-Reason-Vehicle-Details-Modal{
+    .ant-modal-body {
+      min-height: auto !important;
+    }
+  }
+  // RouteDeviationModal
+  .Route-Deviation-Modal{
+    .ant-modal-body {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px
+    }
+    .Field {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+    }
+    .Input {
+      display: block;
+      width: 273px;
+
+      .Input__Label {
+        font-size: 0.875rem;
+      }
+    }
+    .Remark {
+      .Input{
+        width: 850px;
+        height: auto;
+      }
+    }
+  }
+
+  // VehicleDetails
+  .Vehicle-Details-Modal {
+    .ant-modal-body {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      min-height: 550px;
+    }
+    .Field {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+    }
+    .Mb-6 {
+      margin-bottom: 6px;
+    }
+    .Input {
+      display: block;
+      width: 273px;
+
+      .Input__Label {
+        font-size: 0.875rem;
+      }
+    }
+    .Red {
+      .Input__Value {
+        color: @red;
+      }
+    }
+    .Orange {
+      .Input__Value {
+        color: @orange;
+      }
+    }
+    .Green {
+      .Input__Value {
+        color: @green;
+      }
+    }
+    .Form-Wrap {
+      flex-wrap: wrap;
+    }
+  }
+  // Vehicle Details Additional info
+  .Vehicle-Details-Add-Info :nth-child(1) { order: 1 };
+  .Vehicle-Details-Add-Info :nth-child(2) { order: 2 };
+  .Vehicle-Details-Add-Info :nth-child(3) { order: 3 };
+  .Vehicle-Details-Add-Info :nth-child(4) { order: 4 };
+  .Vehicle-Details-Add-Info :nth-child(5) { order: 6 };
+  .Vehicle-Details-Add-Info :nth-child(6) { order: 6 };
+  .Vehicle-Details-Add-Info :nth-child(7) { order: 5 };
+  .Vehicle-Details-Add-Info :nth-child(8) { order: 6 };
+  .Vehicle-Details-Add-Info :nth-child(9) { order: 6 };
+  .Vehicle-Details-Add-Info :nth-child(10) { order: 6 };
+  .Vehicle-Details-Add-Info :nth-child(11) { order: 6 };
+  .Vehicle-Details-Add-Info :nth-child(12) { order: 6 };
+
+  .ant-modal-close {
+    top: 5px;
+  }
+
+  .ant-modal-body {
+    padding: 20px;
+    line-height: 1;
+  }
+  .VtsReasonModal {
+    top: 205px !important;
+    width: fit-content !important;
+    min-width: 400px;
+    .ant-modal-content {
+      height: 231px;
+    }
+    .ant-modal-body {
+      padding: 38px 30px 0px 30px;
+    }
+    .ant-modal-footer {
+      padding: 30px;
+    }
+    .Input {
+      margin-top: 24px;
+    }
+    .Input .Input__Label {
+      font-size: 0.875rem;
+      color: @gray50;
+    }
+    .Input .ant-input {
+      font-size: 1rem;
+    }
+  }
+  .VtsDatePicker {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+    .DatePicker__Label {
+      font-size: 0.875rem;
+      color: @gray99;
+      margin-bottom: 6px;
+    }
+  
+    .Error {
+      &:extend(.Input__Label);
+    }
+  
+    .Error--Border {
+      &:extend(.Box--Shadow);
+      border: 1px solid @error-color;
+      border-right-width: 1px !important;
+    }
+  
+    .ant-picker {
+      border-radius: 4px; 
+      font-size: 0.875rem;
+      padding: 12px 8px 9px 8px;
+      position: absolute;
+      left: 0;
+      top: 20px;
+      right: 0;
+      height: 36px;
+    }
+  
+    .ant-picker:focus {
+      border: 1px solid @input-focus-border-color;
+      outline: 1;
+      -webkit-box-shadow: @box-shadow-base;
+      box-shadow: @box-shadow-base;
+      border-right-width: 1px !important;
+    }
+  
+    .DatePicker__Error {
+      font-size: 0.75rem;
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+      color: @error-color;
+    }
+    input {
+      color: @graydark;
+    }
+  }
+  .VtsDateRangePicker {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+    height: 54px;
+    top: -16px;
+    .DateRangePicker__Label {
+      font-size: 0.875rem;
+      color: @gray99;
+      margin-bottom: 6px;
+    }
+  
+    .Error {
+      &:extend(.Input__Label);
+    }
+  
+    .Error--Border {
+      &:extend(.Box--Shadow);
+      border: 1px solid @error-color;
+      border-right-width: 1px !important;
+    }
+  
+    .ant-picker {
+      border-radius: 4px; 
+      font-size: 0.875rem;
+      padding: 12px 8px 9px 8px;
+      position: absolute;
+      left: 0;
+      top: 20px;
+      right: 0;
+      height: 36px;
+    }
+  
+    .ant-picker:focus {
+      border: 1px solid @input-focus-border-color;
+      outline: 1;
+      -webkit-box-shadow: @box-shadow-base;
+      box-shadow: @box-shadow-base;
+      border-right-width: 1px !important;
+    }
+  
+    .DateRangePicker__Error {
+      font-size: 0.75rem;
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+      color: @error-color;
+    }
+    input {
+      color: @graydark;
+    }
+  }   
+  .TripReplayModal {
+
+    .leaflet-control-layers {
+      display: none;
+    }
+    .mutant-attr-container {
+      display: none;
+    }
+    .leaflet-control-attribution {
+      display: none !important;
+    }
+
+    .Map-Height {
+      margin-top: 30px;
+      height: 430px;
+      width: 1160px;
+    }
+  }
+  .Dispatch-CallerOnMap {
+    .ant-modal-body {
+      padding: 0px;
+    }
+    .Map-Height {
+      height: 450px;
+    }
+    .leaflet-control-layers {
+      display: none;
+    }
+    .mutant-attr-container {
+      display: none;
+    }
+    .leaflet-control-attribution {
+      display: none !important;
+    }
+  }
+  .Dispatch-ErvOnMap {
+    .ant-modal-body {
+      padding: 0px;
+    }
+    .Map-Height {
+      height: 450px;
+    }
+    .leaflet-control-layers {
+      display: none;
+    }
+    .mutant-attr-container {
+      display: none;
+    }
+    .leaflet-control-attribution {
+      display: none !important;
+    }
+  }
+  
+  #Hidden-Screen-Print {
+    display:none;
+  }
+  .DashboardCallStatusModal {
+    .ant-modal-body {
+      padding: 10px;
+      min-height: 500px;
+      word-wrap: break-word;
+    }
+    .Call-Status-Modal {
+      .Input {
+        display: block;
+        width: 225px;
+        .Input__Label {
+          font-size: 0.875rem;
+        }
+      }
+      .Field {
+        margin: 10px 10px;
+      }
+      .Form-Wrap {
+        flex-wrap: wrap;
+      }
+      .Tracking-Status {
+        margin-top: 60px;
+        margin-bottom: 40px;
+      }
+    }
+  }  
+  .Ambulance-Icon {
+    width: 115px;
+    height: 100px;
+    .Ambulance-Bg{
+        width: 60px;
+        height: 60px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        margin: 10px auto;
+        position: relative;
+    }
+    .Shadow{
+        box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.11);
+    }
+    .Dashed-Border{
+        border: 1px dashed #999999;
+    }
+    .Dashed-Line__Black{
+        width: 80px;
+        position: absolute;
+        right: 60px;
+        top: 0;
+        margin: auto;
+        bottom: 0;
+        height: 1px;
+        border-bottom: 1px dashed black;
+    }
+    .Dashed-Line__Red {
+        width: 80px;
+        position: absolute;
+        right: 60px;
+        top: 0;
+        margin: auto;
+        bottom: 0;
+        height: 1px;
+        border-bottom: 1px dashed red;
+    }
+    .Ambulance-Icon-Img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        height: 36px;
+        width: 32px;
+    }
+    .TimeContainer {
+        width: 110px;
+    }
+  }
+
+  .TooltipTable {
+    .rowToolTip {
+      border-bottom: '1px solid';
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .rowKey {
+      flex:1;
+      align-items: center;
+      padding-left: 5px;
+    }
+    .rowValue {
+      padding: 5px;
+      text-align: center;
+    }
+    .custom-tooltip-class {
+      color: yellow;
+      background-color: green;
+    }
+    
+    .custom-tooltip-class .ant-tooltip-arrow {
+      border-bottom-color: green;
+    }
+    
+  }
+  
+  @media print {
+    table {
+      page-break-inside:auto
+    }
+    
+    tr {
+      page-break-inside:avoid;
+      page-break-after:auto
+    }
+    
+    thead {
+      display:table-header-group;
+    }
+  
+    #Hidden-Screen-Print {
+      display:block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: @highlight-color;
+      z-index: 1001;
+    }
+  
+    .No_Print {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,3 @@
+import TotalPregnancyCasesServedSummaryWrap from './TotalPregnancyCasesServedSummaryWrap';
+
+export default TotalPregnancyCasesServedSummaryWrap;

@@ -1,0 +1,3 @@
+import AverageResponseTimeUrbanRuralSummary from './AverageResponseTimeUrbanRuralSummary';
+
+export default AverageResponseTimeUrbanRuralSummary;
