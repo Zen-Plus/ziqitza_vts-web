@@ -29,4 +29,3 @@ yarn-error.log*
 .envStag.json
 .envProd.json
 .env.json
-package-lock.json
